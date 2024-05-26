@@ -3,22 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(45deg, #2c3e50, #4a627a, #6a8ca0, #8bb6cf, #b6d7f6);
-  background-size: 200% 200%;
-  animation: gradientBG 15s ease infinite;
+  background: linear-gradient(45deg, #1a1a1a, #2c3e50);
   color: #ecf0f1;
-}
-
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* כותרת */
@@ -30,7 +16,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f39c12;
+  color: #3498db;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   animation: fadeInDown 2s ease-out;
 }
@@ -48,46 +34,41 @@ header {
 
 /* ניווט */
 nav {
-  background-color: rgba(39, 174, 96, 0.8);
+  background-color: #2c3e50;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1;
-  backdrop-filter: blur(10px);
-  text-align: center; /* הוספתי עבור הישראלי */
 }
 
 nav a {
-  color: #3498db; /* צבע לינקים */
+  color: #ecf0f1;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 10px 0;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 0;
+  display: block;
   transition: all 0.3s ease;
-  display: inline-block;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #f39c12; /* צבע לינקים בעת ההובר */
+  background-color: #3498db;
 }
 
 /* תוכן ראשי */
 main {
   padding: 40px;
-  text-align: center;
 }
 
 main p.welcome {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #34495e;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ecf0f1;
   border-radius: 10px;
   padding: 30px;
   font-size: 2em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease-out;
-  backdrop-filter: blur(10px);
 }
 
 @keyframes fadeInUp {
@@ -102,79 +83,12 @@ main p.welcome {
 }
 
 main .code {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid #ecf0f1;
+  background-color: #2c3e50;
+  border: 2px solid #3498db;
   padding: 20px;
   margin: 20px 0;
   text-align: left;
   white-space: pre-wrap;
-  color: #34495e;
+  color: #ecf0f1;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-out;
-  backdrop-filter: blur(10px);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-button {
-  background-color: #2ecc71; /* צבע הלחצן */
-  border: none;
-  border-radius: 25px;
-  font-size: 20px;
-  width: 200px;
-  height: 50px;
-  color: #fff;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-button:hover {
-  background-color: #27ae60; /* צבע הלחצן בעת ההובר */
-  transform: scale(1.1);
-}
-
-/* כותרת תחתונה */
-footer {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #34495e;
-  padding: 20px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-}
-
-footer a {
-  color: #34495e;
-  text-decoration: none;
-  margin: 0 15px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-footer a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #f39c12;
 }
