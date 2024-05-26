@@ -55,20 +55,22 @@ nav {
   top: 0;
   z-index: 1;
   backdrop-filter: blur(10px);
+  text-align: center; /* הוספתי עבור הישראלי */
 }
 
 nav a {
-  color: #c0392b;
+  color: #3498db; /* צבע לינקים */
   text-decoration: none;
   margin: 0 20px;
   padding: 10px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.5);
-  color: #f39c12;
+  color: #f39c12; /* צבע לינקים בעת ההובר */
 }
 
 /* תוכן ראשי */
@@ -123,7 +125,7 @@ main .code {
 }
 
 button {
-  background-color: #2980b9;
+  background-color: #2ecc71; /* צבע הלחצן */
   border: none;
   border-radius: 25px;
   font-size: 20px;
@@ -150,7 +152,7 @@ button {
 }
 
 button:hover {
-  background-color: #3498db;
+  background-color: #27ae60; /* צבע הלחצן בעת ההובר */
   transform: scale(1.1);
 }
 
