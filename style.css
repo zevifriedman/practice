@@ -2,45 +2,73 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  background: linear-gradient(135deg, #4B6CB7, #182848);
-  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #2c3e50, #4a627a, #6a8ca0, #8bb6cf, #b6d7f6);
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+  color: #ecf0f1;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* כותרת */
 header {
   height: 250px;
-  background-image: url('https://source.unsplash.com/featured/?programming');
+  background-image: url('https://source.unsplash.com/featured/?nature');
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #fff;
-  animation: slideInTop 1s ease-out;
+  color: #f39c12;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  animation: fadeInDown 2s ease-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ניווט */
 nav {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(39, 174, 96, 0.8);
   padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1;
+  backdrop-filter: blur(10px);
 }
 
 nav a {
-  color: #fff;
+  color: #c0392b;
   text-decoration: none;
-  margin: 0 15px;
-  padding: 8px 15px;
+  margin: 0 20px;
+  padding: 10px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #f39c12;
 }
 
 /* תוכן ראשי */
@@ -50,30 +78,52 @@ main {
 }
 
 main p.welcome {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #34495e;
   border-radius: 10px;
   padding: 30px;
   font-size: 2em;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1s ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 main .code {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ecf0f1;
   padding: 20px;
   margin: 20px 0;
   text-align: left;
   white-space: pre-wrap;
-  color: #fff;
+  color: #34495e;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-out;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 button {
-  background-color: #6D214F;
+  background-color: #2980b9;
   border: none;
   border-radius: 25px;
   font-size: 20px;
@@ -83,83 +133,46 @@ button {
   cursor: pointer;
   margin-top: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 button:hover {
-  background-color: #9B4D8C;
+  background-color: #3498db;
   transform: scale(1.1);
 }
 
 /* כותרת תחתונה */
 footer {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #34495e;
   padding: 20px;
   text-align: center;
+  backdrop-filter: blur(10px);
 }
 
 footer a {
-  color: #fff;
+  color: #34495e;
   text-decoration: none;
   margin: 0 15px;
-  padding: 8px 15px;
+  padding: 10px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 footer a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* עיצוב חדש */
-main {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-main h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-main h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-main p {
-  font-size: 1.2em;
-  line-height: 1.5;
-}
-
-main ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-main ul li {
-  margin-bottom: 10px;
-}
-
-/* תפריט מעניין */
-nav {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-nav a {
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #f39c12;
 }
