@@ -1,131 +1,140 @@
-/* הגדרות כלליות */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  background-color: #1E1E1E;
-  color: #D4D4D4;
-}
-
-/* כותרת */
-header {
-  height: 150px;
-  background-color: #282C34;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #61AFEF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 2.5em;
-}
-
-/* ניווט */
-nav {
-  background-color: #282C34;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 15px;
-}
-
-nav a {
-  color: #D4D4D4;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  font-size: 18px;
-}
-
-nav a:hover {
-  background-color: #61AFEF;
-  color: #1E1E1E;
-}
-
-/* תוכן ראשי */
-main {
-  padding: 40px 20px;
+  font-family: 'Arial Narrow Bold', Impact, Haettenschweiler, sans-serif;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
   text-align: center;
 }
 
+header {
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 2.5em;
+  width: 100%;
+  height: 350px;
+  background-image: url('Background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #2575fc;
+  transform: scale(1.1);
+}
+
+main {
+  margin-top: 400px;
+  padding: 20px;
+}
+
 main p.welcome {
-  background-color: #282C34;
-  color: #D4D4D4;
-  border-radius: 10px;
-  padding: 30px;
-  font-size: 1.4em;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  margin: 20px auto;
-  max-width: 800px;
+  background-color: #2575fc;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 2.5em;
+  animation: fadeIn 2s ease-in-out;
 }
 
 main .code {
-  background-color: #282C34;
-  border: 1px solid #444;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 1.2em;
   padding: 20px;
   margin: 20px 0;
   text-align: left;
   white-space: pre-wrap;
-  color: #D4D4D4;
+  color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  max-width: 800px;
-  margin: 20px auto;
-  font-family: 'Roboto Mono', monospace;
+  animation: fadeIn 2s ease-in-out;
 }
 
 button {
-  background-color: #61AFEF;
+  background-color: #ff6f61;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  padding: 12px 25px;
-  color: #1E1E1E;
+  border-radius: 25px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  color: white;
   cursor: pointer;
   margin-top: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #D4D4D4;
-  color: #282C34;
-  transform: scale(1.05);
+  background-color: #ff856c;
+  transform: scale(1.1);
 }
 
-/* כותרת תחתונה */
 footer {
-  background-color: #282C34;
-  color: #D4D4D4;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  text-align: center;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a {
-  color: #D4D4D4;
+  color: white;
   text-decoration: none;
   margin: 0 15px;
   padding: 10px 20px;
-  border-radius: 5px;
+  font-size: 1.2em;
   transition: all 0.3s ease;
-  font-size: 16px;
+  border-radius: 5px;
 }
 
 footer a:hover {
-  background-color: #61AFEF;
-  color: #1E1E1E;
+  background-color: #ffffff;
+  color: #2575fc;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
