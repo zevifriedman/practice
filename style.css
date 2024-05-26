@@ -2,57 +2,45 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #F8F8F8;
-  color: #333;
+  font-family: 'Roboto Mono', monospace;
+  background: linear-gradient(135deg, #4B6CB7, #182848);
+  color: #fff;
 }
 
 /* כותרת */
 header {
-  height: 200px;
-  background-image: url('https://source.unsplash.com/featured/?nature');
+  height: 250px;
+  background-image: url('https://source.unsplash.com/featured/?programming');
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: slideInTop 1s ease-out;
 }
 
 /* ניווט */
 nav {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
 nav a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  margin: 0 15px;
+  padding: 8px 15px;
   border-radius: 20px;
   transition: all 0.3s ease;
-  font-size: 16px; /* גודל טקסט רגיל */
 }
 
 nav a:hover {
-  background-color: #F0F0F0;
-  color: #FF9AA2;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* תוכן ראשי */
@@ -62,63 +50,64 @@ main {
 }
 
 main p.welcome {
-  background-color: #fff;
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   border-radius: 10px;
   padding: 30px;
-  font-size: 1.2em;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out;
 }
 
 main .code {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
   padding: 20px;
   margin: 20px 0;
   text-align: left;
   white-space: pre-wrap;
-  color: #333;
+  color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out;
 }
 
 button {
-  background-color: #FF9AA2;
+  background-color: #6D214F;
   border: none;
   border-radius: 25px;
-  font-size: 16px; /* גודל טקסט רגיל */
-  padding: 10px 20px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
   color: #fff;
   cursor: pointer;
   margin-top: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
-  background-color: #FFB7B2;
+  background-color: #9B4D8C;
   transform: scale(1.1);
 }
 
 /* כותרת תחתונה */
 footer {
-  background-color: #fff;
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
 
 footer a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   margin: 0 15px;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-radius: 20px;
   transition: all 0.3s ease;
-  font-size: 16px; /* גודל טקסט רגיל */
 }
 
 footer a:hover {
-  background-color: #F0F0F0;
-  color: #FF9AA2;
+  background-color: rgba(255, 255, 255, 0.1);
 }
