@@ -3,71 +3,55 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(45deg, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7);
-  background-size: 200% 200%;
-  animation: gradientBG 15s ease infinite;
+  background-color: #F8F8F8;
   color: #333;
-}
-
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* כותרת */
 header {
-  height: 250px;
+  height: 200px;
   background-image: url('https://source.unsplash.com/featured/?nature');
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ff0202;
-  text-shadow: 22px 22px 14px rgb(0, 0, 0);
-  animation: fadeInDown 2s ease-out;
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ניווט */
 nav {
-  background-color: rgba(7, 194, 251, 0.8);
-  padding: 10px;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1;
-  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
 }
 
 nav a {
-  color: #f60000;
+  color: #333;
   text-decoration: none;
-  margin: 0 20px;
   padding: 10px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
+  font-size: 16px; /* גודל טקסט רגיל */
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #F0F0F0;
   color: #FF9AA2;
 }
 
@@ -78,30 +62,17 @@ main {
 }
 
 main p.welcome {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
   color: #333;
   border-radius: 10px;
   padding: 30px;
-  font-size: 2em;
+  font-size: 1.2em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 1s ease-out;
-  backdrop-filter: blur(10px);
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 main .code {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid #ddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   padding: 20px;
   margin: 20px 0;
   text-align: left;
@@ -109,44 +80,19 @@ main .code {
   color: #333;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-out;
-  backdrop-filter: blur(10px);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 button {
   background-color: #FF9AA2;
   border: none;
   border-radius: 25px;
-  font-size: 20px;
-  width: 200px;
-  height: 50px;
+  font-size: 16px; /* גודל טקסט רגיל */
+  padding: 10px 20px;
   color: #fff;
   cursor: pointer;
   margin-top: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
@@ -156,11 +102,10 @@ button:hover {
 
 /* כותרת תחתונה */
 footer {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
   color: #333;
   padding: 20px;
   text-align: center;
-  backdrop-filter: blur(10px);
 }
 
 footer a {
@@ -170,9 +115,10 @@ footer a {
   padding: 10px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
+  font-size: 16px; /* גודל טקסט רגיל */
 }
 
 footer a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #F0F0F0;
   color: #FF9AA2;
 }
