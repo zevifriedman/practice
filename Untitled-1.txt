@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צ'אט</title>
+    <style>
+        body {
+          font-family: sans-serif;
+        }
+
+        .container {
+          width: 500px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .chat-area {
+          border: 1px solid #ccc;
+          padding: 10px;
+          margin-bottom: 10px;
+          height: 300px;
+          overflow-y: scroll;
+        }
+
+        .message {
+          margin-bottom: 10px;
+        }
+
+        .user-message {
+          background-color: #f0f0f0;
+          padding: 5px;
+          border-radius: 5px;
+        }
+
+        .ai-message {
+          background-color: #e0e0e0;
+          padding: 5px;
+          border-radius: 5px;
+        }
+
+        .input-area {
+          display: flex;
+        }
+
+        #user-input {
+          flex: 1;
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        button {
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>צ'אט עם בינה מלאכותית</h1>
+    <div class="chat-area" id="chat-area">
+        <div class="message user-message">היי, מה שלומך?</div>
+        <div class="message ai-message" id="ai-response"></div>
+    </div>
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="הזן הודעה...">
+        <button onclick="sendUserMessage()">שלח</button>
+    </div>
+</div>
+
+<script>
+    const apiKey = "AIzaSyCpT_-6wOhff-5UVpyRxpOo6Xyc2TeslqY"; // החלף במפתח ה-API שלך
+    const chatAreaElement = document.getElementById("chat-area");
+    const aiResponseElement = document.getElementById("ai-response");
+    const userInputElement = document.getElementById("user-input");
+
+    function sendUserMessage() {
+      const userMessage = userInputElement.value;
+      userInputElement.value = "";
+
+      const messageElement = document.createElement("div");
+      messageElement.classList.add("message", "user-message");
+      messageElement.textContent = userMessage;
+      chatAreaElement.appendChild(messageElement);
+      chatAreaElement.scrollTop = chatAreaElement.scrollHeight;
+
+      sendAiRequest(userMessage);
+    }
+
+    function sendAiRequest(userMessage) {
+      const url = `https://dialogflow.googleapis.com/v2/projects/chat-ai-project-id/locations/global/agent/sessions/detectIntent?key=${apiKey}`;
+      const body = {
+        queryInput: {
+          text: {
+            text: userMessage,
+            languageCode: "he",
+          },
+        },
+      };
+
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const aiResponse = data.queryResult.fulfillmentText;
+          const messageElement = document.createElement("div");
+          messageElement.classList.add("message", "ai-message");
+          messageElement.textContent = aiResponse;
+          chatAreaElement.appendChild(messageElement);
+          chatAreaElement.scrollTop = chatAreaElement.scrollHeight;
+        });
+    }
+</script>
+</body>
+</html>
