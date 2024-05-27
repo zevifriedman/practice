@@ -1,89 +1,236 @@
+/* Resetting default margin and padding */
 body {
-  margin-right: 50px;
-  margin: 0px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
+/* Centering everything */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header Styles */
 header {
-  border: 1px solid bisque;
-  color: bisque;
-  font-size: 2em;
-  width: 100%;
-  height: 350px;
-  background-image: url(/Backround.jpg);
+  background-color: #2d3740; /* Darker blue background */
+  color: #fff; /* White text */
+  padding: 20px;
   text-align: center;
-  margin-right: 10px;
+  width: 100%;
+  position: relative; /* Added relative positioning for effects */
+}
+
+header h1 {
+  font-size: 2.2em; /* Bigger font size for heading */
+  margin-bottom: 10px;
+  color: #00bcd4; /* Accent color for h1 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Text shadow effect */
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #30363d; /* Slightly darker blue background */
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
 }
 
 nav a {
-  background-color: lightskyblue;
-  padding-left: 2px;
-  margin-top: 50px;
-  margin-right: 30px;
-  font-size: 2em;
-  color: rgb(0, 0, 0);
-  text-decoration-line: none;
-  border-radius: 5px;
-  text-align: center;
-}
-
-a:hover {
-  font-weight: bold;
-}
-
-footer a {
-  background-color: lightskyblue;
-  padding-left: 2px;
-  margin-top: 50px;
-  margin-right: 30px;
-  font-size: 2em;
-  color: rgb(0, 0, 0);
-  text-decoration-line: none;
-  border-radius: 5px;
-  text-align: center;
-}
-
-nav {
-  position: absolute;
-  top: 54%;
   display: inline-block;
-  width: 100vw;
-  text-align: center;
-
-  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  color: #ffffff; /* Black text for better contrast */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
+nav a:hover {
+  background-color: #00bcd4; /* Lighter blue on hover */
+}
+
+/* Main Content Styles */
 main {
+  padding: 15px; /* Reduced padding */
   text-align: center;
-  font-size: 2em;
-}
-main p {
-  text-align: center;
-  font-size: 3em;
+  color: #000; /* Black text for better readability */
 }
 
+/* Code Box Styles */
 .code {
-  border: 2px solid;
-  background-color: gainsboro;
-  font-size: 1.5em;
+  border: 1px solid #ccc; /* Lighter border */
+  background-color: #f2f3f4; /* Lighter gray background */
+  padding: 20px;
+  font-size: 1.5em; /* Regular font size */
 }
 
+.exercise {
+  font-size: 1.4em;
+}
+
+/* Button Styles */
 button {
-  background-color: bisque;
-  border-radius: 20px;
-  font-size: 20px;
-  width: 200px;
-  height: 50px;
-  border: 5px solid;
+  background: linear-gradient(45deg, #00bcd4, #3f51b5);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-  font-weight: bold;
-  cursor: pointer;
-  border: 6px solid;
+  background: linear-gradient(45deg, #3f51b5, #00bcd4);
+  transform: scale(1.05);
 }
 
+/* Welcome Box Styles */
 .welcome {
-  background-color: lightskyblue;
-  border-radius: 20px;
+  background-color: #00bcd4; /* Lighter gray background */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Sticky Nav Styles */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Next Exercise Link Styles */
+.next-exercise {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #00bcd4; /* Accent color background */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform;
+}
+
+/*   */
+
+/* Styling the hero section */
+hero {
+  display: flex;
+  justify-content: center; /* Changed to center content */
+  align-items: center;
+  padding: 50px 0;
+  background-color: #595bd8;
+}
+
+.hero-content {
+  text-align: right; /* Right alignment for Hebrew text */
+  display: flex; /* Wrap text and button in a flex container */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  background-color: #00bcd4;
+}
+
+.hero-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center; /* Optional: center heading text */
+}
+
+.hero-content pre {
+  line-height: 1.5; /* Adjust line spacing for readability */
+  margin-bottom: 20px;
+  text-align: center; /* Center code snippet text */
+  color: white;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto; /* Add margin-top for vertical centering */
+  margin-bottom: 10px;
+}
+
+.hero-content button:hover {
+  background-color: #3f51b5;
+}
+
+/* code snippet */
+
+.code-snippet {
+  margin-top: 50px; /* Add spacing after hero section */
+  background-color: #eee;
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center; /* Center the content horizontally */
+  margin: 0 auto; /* Horizontally center the section */
+  animation: animateBackground 5s infinite linear; /* Add animation */
+}
+
+.code-snippet h2 {
+  margin-bottom: 15px;
+}
+
+.code-snippet pre {
+  background-color: #333; /* Dark background for code */
+  color: #fff; /* Light text color for code */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace; /* Use monospaced font for code */
+  overflow: auto; /* Enable horizontal scrolling for long lines */
+}
+
+.code-snippet p {
+  margin-top: 10px;
+}
+
+/* Animation for background color change */
+@keyframes animateBackground {
+  from {
+    background-color: #eee;
+  }
+  to {
+    background-color: #f5f5f5;
+  }
+}
+
+/* footer */
+
+/* ... existing CSS styles ... */
+
+.footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+  padding: 20px 0; /* Reduce padding slightly */
+  text-align: center; /* Center content horizontally */
+}
+
+.footer p {
+  margin-bottom: 0; /* Remove margin for cleaner look */
+  font-size: 1em;
+}
+
+.footer a {
+  color: #00bcd4; /* Link color */
+  text-decoration: none; /* Remove underline from link */
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #3f51b5; /* Link hover color */
 }
