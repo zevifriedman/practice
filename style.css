@@ -25,7 +25,7 @@ header {
 }
 
 header h1 {
-  font-size: 2.2em; /* Bigger font size for heading */
+  font-size: 3.3em; /* Increased font size by 50% */
   margin-bottom: 10px;
   color: #00bcd4; /* Accent color for h1 */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Text shadow effect */
@@ -34,35 +34,39 @@ header h1 {
 /* Navigation Styles */
 nav {
   background-color: #30363d; /* Slightly darker blue background */
-  padding: 10px 0;
+  padding: 20px 0; /* Doubled padding */
   text-align: center;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Doubled minimum width for grid items */
+  gap: 20px; /* Doubled gap between grid items */
 }
 
 nav a {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 30px 60px; /* Doubled padding */
   color: #ffffff; /* Black text for better contrast */
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.2s;
+  font-size: 2em;
 }
 
 nav a:hover {
   background-color: #00bcd4; /* Lighter blue on hover */
 }
-
 /* Main Content Styles */
 main {
   padding: 15px; /* Reduced padding */
   text-align: center;
   color: #000; /* Black text for better readability */
+  font-size: 1.8em;
 }
 
 /* Code Box Styles */
@@ -114,12 +118,17 @@ button:hover {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #00bcd4; /* Accent color background */
+  background-color: #2e70eb; /* Accent color background */
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s, transform;
+  font-size: 1.5em;
+}
+
+.next-exercise:hover {
+  font-size: 1.6em;
 }
 
 /*   */
