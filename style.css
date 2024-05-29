@@ -120,6 +120,11 @@ header h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Text shadow effect */
 }
 
+.navbar.scrolled {
+  opacity: 0; /* Transparent when scrolled down */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
 nav {
   background-color: #30363d; /* Slightly darker blue background */
   padding: 10px 20px; /* Reduced padding for less height */
