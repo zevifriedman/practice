@@ -188,8 +188,55 @@ main {
   font-size: 1.5em; /* Regular font size */
 }
 
+/* סגנון כללי לתרגילים */
 .exercise {
-  font-size: 1.4em;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-left: 5px solid #007bff;
+  transition: all 0.3s ease; /* אנימציה כאשר מעבירים על התרגיל */
+}
+
+/* כאשר מעבירים על התרגיל */
+.exercise:hover {
+  transform: translateY(-5px); /* העברת התרגיל מעט מלמטה */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* שינוי בצל */
+}
+
+/* כותרת התרגיל */
+.exercise h3 {
+  color: #007bff;
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* קטע הקוד */
+.exercise pre {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: auto; /* גלילה אופקית */
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+/* Welcome Box Styles */
+.welcome {
+  background-color: #00bcd4; /* Lighter gray background */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Sticky Nav Styles */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Button Styles */
@@ -207,21 +254,6 @@ button {
 button:hover {
   background: linear-gradient(45deg, #3f51b5, #00bcd4);
   transform: scale(1.05);
-}
-
-/* Welcome Box Styles */
-.welcome {
-  background-color: #00bcd4; /* Lighter gray background */
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Sticky Nav Styles */
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .next-exercise {
