@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
+  direction: rtl;
 }
 
 /* Centering everything */
@@ -127,33 +128,40 @@ header h1 {
 
 nav {
   background-color: #30363d; /* Slightly darker blue background */
-  padding: 10px 20px; /* Reduced padding for less height */
+  padding: 10px 0; /* Reduced padding for less height */
   text-align: center;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(150px, 1fr)
-  ); /* Adjusted minimum width and gap */
-  gap: 10px; /* Smaller gap for a tighter layout */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  white-space: nowrap; /* Prevent wrapping to a new line */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center navbar items horizontally */
 }
 
 nav a {
   display: inline-block;
   padding: 15px 30px; /* Reduced padding for less height */
-  color: #ffffff; /* Black text for better contrast */
+  color: #ffffff; /* White text for better contrast */
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.2s;
   font-size: 1.4em; /* Slightly smaller font size */
+  margin: 0 5px; /* Add some space between links */
 
   /* Cool underline animation on hover */
   position: relative;
   overflow: hidden;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  nav a {
+    padding: 10px 15px; /* Adjusted padding for smaller screens */
+    font-size: 1em; /* Adjusted font size for smaller screens */
+  }
 }
 
 nav a:after {
@@ -178,14 +186,6 @@ main {
   text-align: center;
   color: #000; /* Black text for better readability */
   font-size: 1.8em;
-}
-
-/* Code Box Styles */
-.code {
-  border: 1px solid #ccc; /* Lighter border */
-  background-color: #f2f3f4; /* Lighter gray background */
-  padding: 20px;
-  font-size: 1.5em; /* Regular font size */
 }
 
 /* סגנון כללי לתרגילים */
@@ -226,6 +226,8 @@ main {
 
 /* Welcome Box Styles */
 .welcome {
+  background: linear-gradient(120deg, #00bcd4, #3f51b5);
+
   background-color: #00bcd4; /* Lighter gray background */
   padding: 20px;
   border-radius: 10px;
@@ -260,30 +262,22 @@ button:hover {
   position: fixed;
   bottom: 20px;
   left: 20px;
-
-  /* Background with a cool, animated gradient */
   background: linear-gradient(to top right, #3f51b5 0%, #00bcd4 100%);
-  background-size: 200% auto; /* Creates a repeating gradient effect */
+  background-size: 200% auto;
   animation: gradient-animate 5s ease-in-out infinite alternate;
-
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
+  border: 2px solid #2d3740;
   text-decoration: none;
   font-size: 1.5em;
-
-  /* Improved transitions and cool hover effect */
   transition: background-color 0.3s, transform 0.2s;
   transform: scale(1); /* Set initial scale to avoid jumpiness */
   animation: pop-animation 0.5s ease-in-out infinite alternate;
 }
 
 .next-exercise:hover {
-  background: linear-gradient(
-    to top right,
-    #00bcd4 0%,
-    #3f51b5 100%
-  ); /* Reverse gradient on hover */
+  background: linear-gradient(to top right, #00bcd4 0%, #3f51b5 100%);
   transform: scale(1.05); /* Increase scale slightly on hover */
 }
 
@@ -309,36 +303,38 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .next-exercise {
+    bottom: 10px; /* Adjusted bottom spacing for smaller screens */
+    left: 10px; /* Adjusted left spacing for smaller screens */
+    font-size: 1em; /* Reduced font size for smaller screens */
+    padding: 8px 16px; /* Reduced padding for smaller screens */
+  }
+}
+
 /*  */
 
 .previous-exercise {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* Positions it to the right side */
-
-  /* Background with the same animated gradient */
+  right: 20px;
   background: linear-gradient(to top right, #3f51b5 0%, #00bcd4 100%);
-  background-size: 200% auto; /* Creates a repeating gradient effect */
+  background-size: 200% auto;
   animation: gradient-animate 5s ease-in-out infinite alternate;
-
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
+  border: 2px solid #2d3740;
+
   text-decoration: none;
   font-size: 1.5em;
-
-  /* Improved transitions and cool hover effect */
   transition: background-color 0.3s, transform 0.2s;
   transform: scale(1); /* Set initial scale to avoid jumpiness */
   animation: pop-animation 0.5s ease-in-out infinite alternate;
 }
 
 .previous-exercise:hover {
-  background: linear-gradient(
-    to top right,
-    #00bcd4 0%,
-    #3f51b5 100%
-  ); /* Reverse gradient on hover */
+  background: linear-gradient(to top right, #00bcd4 0%, #3f51b5 100%);
   transform: scale(1.05); /* Increase scale slightly on hover */
 }
 
@@ -364,7 +360,14 @@ button:hover {
   }
 }
 
-/*   */
+@media screen and (max-width: 768px) {
+  .previous-exercise {
+    bottom: 10px; /* Adjusted bottom spacing for smaller screens */
+    right: 10px; /* Adjusted right spacing for smaller screens */
+    font-size: 1em; /* Reduced font size for smaller screens */
+    padding: 8px 16px; /* Reduced padding for smaller screens */
+  }
+}
 
 /* Styling the hero section */
 hero {
@@ -412,48 +415,7 @@ hero {
   background-color: #3f51b5;
 }
 
-/* code snippet */
-
-.code-snippet {
-  margin-top: 50px; /* Add spacing after hero section */
-  background-color: #eee;
-  padding: 30px;
-  border-radius: 5px;
-  text-align: center; /* Center the content horizontally */
-  margin: 0 auto; /* Horizontally center the section */
-  animation: animateBackground 5s infinite linear; /* Add animation */
-}
-
-.code-snippet h2 {
-  margin-bottom: 15px;
-}
-
-.code-snippet pre {
-  background-color: #333; /* Dark background for code */
-  color: #fff; /* Light text color for code */
-  padding: 10px;
-  border-radius: 5px;
-  font-family: monospace; /* Use monospaced font for code */
-  overflow: auto; /* Enable horizontal scrolling for long lines */
-}
-
-.code-snippet p {
-  margin-top: 10px;
-}
-
-/* Animation for background color change */
-@keyframes animateBackground {
-  from {
-    background-color: #eee;
-  }
-  to {
-    background-color: #f5f5f5;
-  }
-}
-
 /* footer */
-
-/* ... existing CSS styles ... */
 
 .footer {
   background-color: #333; /* Dark background color */
@@ -467,12 +429,90 @@ hero {
   font-size: 1em;
 }
 
-.footer a {
-  color: #00bcd4; /* Link color */
-  text-decoration: none; /* Remove underline from link */
-  transition: color 0.3s;
+/* ubject card v */
+
+.subject-link {
+  display: block;
+  text-decoration: none;
 }
 
-.footer a:hover {
-  color: #3f51b5; /* Link hover color */
+.subject-card {
+  position: relative;
+  background: linear-gradient(120deg, #00bcd4, #3f51b5);
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  border: 2px solid #2d3740;
 }
+
+.subject-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.subject-card:hover::before {
+  opacity: 1;
+}
+
+.subject-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+}
+
+.subject-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subject-card p {
+  font-size: 18px;
+}
+
+.subject-card a {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.subject-card a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .subject-card {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .subject-card h2 {
+    font-size: 20px;
+  }
+
+  .subject-card p {
+    font-size: 16px;
+  }
+
+  .subject-card a {
+    padding: 8px 16px;
+  }
+}
+
