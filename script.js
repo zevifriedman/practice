@@ -4,8 +4,8 @@ let previousScrollY = 0;
 // Function to check if the current page is index.html
 function isIndexPage() {
   return (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/exercises.html"
+    window.location.pathname === "index.html" ||
+    window.location.pathname === "exercises.html"
   );
 }
 
