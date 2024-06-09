@@ -62,3 +62,22 @@ document.addEventListener("mousemove", function (event) {
 });
 
 //
+
+const titleElement = document.querySelector("h1");
+const titleText = titleElement.textContent;
+let currentPosition = 0;
+
+function typeEffect() {
+  if (currentPosition < titleText.length) {
+    titleElement.textContent = titleText.slice(0, currentPosition + 1);
+    currentPosition++;
+  } else {
+    currentPosition = 0; // Reset position for infinite loop
+  }
+
+  // Adjust delay based on desired typing speed
+  setTimeout(typeEffect, 200);
+}
+
+// Start the infinite typing effect
+typeEffect();
