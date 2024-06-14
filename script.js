@@ -1,12 +1,9 @@
 const navbar = document.querySelector(".navbar");
 let previousScrollY = 0;
 
-// Function to check if the current page is index.html
+// Function to check if the current page is index.html, exercises.html, or mahat.html
 function isIndexPage() {
-  return (
-    window.location.pathname === "index.html" ||
-    window.location.pathname === "exercises.html"
-  );
+  return window.location.pathname.includes("index.html");
 }
 
 // Add scroll event listener conditionally based on the page
@@ -81,3 +78,22 @@ function typeEffect() {
 
 // Start the infinite typing effect
 typeEffect();
+
+function checkAnswer(questionId, selectedAnswer) {
+  var correctAnswer = document.getElementById(questionId).dataset.correctAnswer;
+  var answerText = document.getElementById("answer" + questionId.substring(8));
+  if (!answerText) {
+    // Create answer element if it doesn't exist
+    answerText = document.createElement("p");
+    answerText.id = "answer" + questionId.substring(8);
+    document.getElementById(questionId).appendChild(answerText);
+  }
+  if (selectedAnswer === correctAnswer) {
+    answerText.style.color = "green";
+    answerText.innerHTML = "תשובה נכונה!";
+  } else {
+    answerText.style.color = "red";
+    answerText.innerHTML = "תשובה שגויה!";
+  }
+  answerText.style.display = "block";
+}

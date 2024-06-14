@@ -188,7 +188,7 @@ main {
   font-size: 1.8em;
 }
 
-/* סגנון כללי לתרגילים */
+/* General style for exercises */
 .exercise {
   background-color: #f8f9fa;
   border-radius: 10px;
@@ -196,16 +196,17 @@ main {
   padding: 20px;
   margin-bottom: 30px;
   border-left: 5px solid #007bff;
-  transition: all 0.3s ease; /* אנימציה כאשר מעבירים על התרגיל */
+  transition: all 0.3s ease; /* Animation on hover */
+  overflow: hidden; /* Hide overflow */
 }
 
-/* כאשר מעבירים על התרגיל */
+/* Hover effect */
 .exercise:hover {
-  transform: translateY(-5px); /* העברת התרגיל מעט מלמטה */
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* שינוי בצל */
+  transform: translateY(-5px); /* Move slightly down */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Change shadow */
 }
 
-/* כותרת התרגיל */
+/* Title */
 .exercise h3 {
   color: #007bff;
   font-size: 1.8em;
@@ -213,15 +214,23 @@ main {
   margin-bottom: 15px;
 }
 
-/* קטע הקוד */
+/* Code snippet */
 .exercise pre {
   font-size: 1.2em;
   line-height: 1.6;
   color: #333;
-  overflow-x: auto; /* גלילה אופקית */
   padding: 15px;
   border-radius: 5px;
   background-color: #f0f0f0;
+  overflow-x: auto; /* Horizontal scroll */
+  white-space: pre-wrap; /* Wrap long lines */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .exercise pre {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
 }
 
 /* Welcome Box Styles */
@@ -243,6 +252,7 @@ main {
 
 /* Button Styles */
 button {
+  margin-top: 5px;
   background: linear-gradient(45deg, #00bcd4, #3f51b5);
   color: #fff;
   border: none;
@@ -369,50 +379,62 @@ button:hover {
   }
 }
 
-/* Styling the hero section */
-hero {
-  display: flex;
-  justify-content: center; /* Changed to center content */
-  align-items: center;
-  padding: 50px 0;
-  background-color: #595bd8;
-}
-
-.hero-content {
-  text-align: right; /* Right alignment for Hebrew text */
-  display: flex; /* Wrap text and button in a flex container */
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center elements horizontally */
-  background-color: #00bcd4;
-}
-
-.hero-content h2 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  text-align: center; /* Optional: center heading text */
-}
-
-.hero-content pre {
-  line-height: 1.5; /* Adjust line spacing for readability */
-  margin-bottom: 20px;
-  text-align: center; /* Center code snippet text */
-  color: white;
-}
-
-.hero-content button {
-  padding: 10px 20px;
-  border: 2px solid;
-  border-radius: 5px;
-  background-color: #00bcd4;
+/* Hero section styles */
+.hero {
+  background: linear-gradient(135deg, #2980b9, #6ab7ff);
   color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: auto; /* Add margin-top for vertical centering */
-  margin-bottom: 10px;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-.hero-content button:hover {
-  background-color: #3f51b5;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
 
 /* footer */
@@ -514,4 +536,29 @@ hero {
   .subject-card a {
     padding: 8px 16px;
   }
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options {
+  margin-left: 20px;
+}
+
+.answer {
+  margin-top: 10px;
 }

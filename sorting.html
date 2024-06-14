@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="well.png" />
+
+    <title>מתרגלים עם מירון - מיונים</title>
+    <script
+      src="https://kit.fontawesome.com/8659cd90c4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>מתרגלים עם מירון</h1>
+      </div>
+      <div class="particle-container"></div>
+    </header>
+
+    <nav class="navbar">
+      <a id="home" href="index.html"
+        ><i class="fa-solid fa-house fa-bounce"></i
+      ></a>
+      <a href="exercises.html">תרגולים</a>
+      <a href="mahat.html">הכנה למה"ט</a>
+    </nav>
+    <br />
+    <main>
+      <div class="welcome">
+        <h2>ברוכים הבאים לתרגול מיונים</h2>
+        <p>🤜🏼</p>
+        <h3>בחלק זה יש 6 שאלות תרגול</h3>
+        <h3>מתחילים בקטנה, ומתרגיל 5 עולים רמה</h3>
+        <h3>ב ה צ ל ח ה</h3>
+        <h3>💯</h3>
+      </div>
+
+      <section class="exercise">
+        <h3>תרגיל 1</h3>
+
+        <pre>
+יש לקבל מערך של מספרים שלמים מהמשתמש
+יש למיין את המערך לפי מספרים זוגיים ואי זוגיים ל-2 מערכים חדשים
+אין צורך למיין לפי גודל
+        </pre>
+        <a href="/answers/if1.html" target="_blank"
+          ><button>פתרון לדוגמה</button></a
+        >
+      </section>
+
+      <section class="exercise">
+        <h3>תרגיל 2</h3>
+
+        <pre>
+יש לקבל מערך של מספרים שלמים מהמשתמש
+יש למיין את המערך לפי מספרים חיוביים ושליליים ל-2 מערכים חדשים
+אין צורך למיין לפי גודל
+        </pre>
+        <a href="/answers/if1.html" target="_blank"
+          ><button>פתרון לדוגמה</button></a
+        >
+      </section>
+
+      <section class="exercise">
+        <h3>תרגיל 3</h3>
+
+        <pre>
+יש ליצור מתודה שמקבלת מערך שבו 2 מספרים שלמים
+המתודה תבדוק האם המספר הראשון גדול מהשני
+במידה וכן, היא תחליף ביניהם ותחזיר מערך מסודר חדש, לדוגמה
+{5, 3}
+יהפוך ל
+{3, 5}
+כותרת המתודה
+public static int[] swap(int[] arr)
+        </pre>
+        <a href="/answers/if1.html" target="_blank"
+          ><button>פתרון לדוגמה</button></a
+        >
+      </section>
+
+      <section class="exercise">
+        <h3>תרגיל 4</h3>
+
+        <pre>
+יש לקבל מערך של מספרים שלמים בגודל 5
+יש לרוץ בלולאה על המערך ולבדוק בכל איטרציה
+אם המספר הנוכחי גדול מהמספר שאחריו
+במידה וכן, יש להחליף ביניהם
+יש להדפיס את המערך לאחר השינויים
+יש לשים לב שהמערך לא יהיה ממויין לגמרי, יש להבין למה, יועיל להמשך
+        </pre>
+        <a href="/answers/if1.html" target="_blank"
+          ><button>פתרון לדוגמה</button></a
+        >
+      </section>
+      <div class="quiz-container">
+        <h1>תרגיל 5</h1>
+        <div class="question" id="question1" data-correct-answer="c">
+          <p>1. מהי מטרת אלגוריתם מיון בחירה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question1', 'a')">
+              א. למצוא את האיבר הגדול ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question1', 'b')">
+              ב. למצוא את האיבר הקטן ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question1', 'c')">
+              ג. לסדר את כל האיברים במערך בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question1', 'd')">
+              ד. לסדר את כל האיברים במערך בסדר יורד.
+            </button>
+          </div>
+        </div>
+
+        <div class="question" id="question2" data-correct-answer="a">
+          <p>2. כיצד עובד אלגוריתם מיון בחירה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question2', 'a')">
+              א. הוא מחליף כל איבר באיבר קטן יותר שנמצא אחריו במערך.
+            </button>
+            <button onclick="checkAnswer('question2', 'b')">
+              ב. הוא מחלק את המערך לשני תת-מערכים וממזג אותם חזרה בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question2', 'c')">
+              ג. הוא בונה ערימה מהנתונים ומסדר אותם מהקטן לגדול.
+            </button>
+            <button onclick="checkAnswer('question2', 'd')">
+              ד. הוא מחלק את המערך לחלקים קטנים יותר וממיין אותם שוב ושוב.
+            </button>
+          </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="question" id="question3" data-correct-answer="b">
+          <p>3. מהי מורכבות הזמן של אלגוריתם מיון בחירה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question3', 'a')">
+              א. O(n log n)
+            </button>
+            <button onclick="checkAnswer('question3', 'b')">ב. O(n^2)</button>
+            <button onclick="checkAnswer('question3', 'c')">ג. O(n)</button>
+            <button onclick="checkAnswer('question3', 'd')">ד. O(log n)</button>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" id="question4" data-correct-answer="b">
+          <p>
+            4. באיזה מקרה אלגוריתם מיון בחירה יהיה יעיל יותר מאשר מיון בועות?
+          </p>
+          <div class="options">
+            <button onclick="checkAnswer('question4', 'a')">
+              א. כאשר המערך כבר מסודר
+            </button>
+            <button onclick="checkAnswer('question4', 'b')">
+              ב. כאשר המערך מכיל מספר קטן של נתונים
+            </button>
+            <button onclick="checkAnswer('question4', 'c')">
+              ג. כאשר המערך מכיל מספר גדול של נתונים
+            </button>
+            <button onclick="checkAnswer('question4', 'd')">
+              ד. כאשר המערך מכיל נתונים כפולים
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" id="question5" data-correct-answer="c">
+          <p>5. מהו יתרון עיקרי של אלגוריתם מיון בחירה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question5', 'a')">
+              א. הוא יעיל הן בזמן והן בזיכרון.
+            </button>
+            <button onclick="checkAnswer('question5', 'b')">
+              ב. הוא מתאים למערכים גדולים מאוד.
+            </button>
+            <button onclick="checkAnswer('question5', 'c')">
+              ג. הוא קל להבנה ויישום.
+            </button>
+            <button onclick="checkAnswer('question5', 'd')">
+              ד. הוא יעיל במיוחד עבור נתונים כפולים.
+            </button>
+          </div>
+        </div>
+        <!-- Question 6 -->
+        <div class="question" id="question6" data-correct-answer="c">
+          <p>6. מהי מטרת אלגוריתם מיון בועות?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question6', 'a')">
+              א. למצוא את האיבר הגדול ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question6', 'b')">
+              ב. למצוא את האיבר הקטן ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question6', 'c')">
+              ג. לסדר את כל האיברים במערך בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question6', 'd')">
+              ד. לסדר את כל האיברים במערך בסדר יורד.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question" id="question7" data-correct-answer="a">
+          <p>7. כיצד עובד אלגוריתם מיון בועות?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question7', 'a')">
+              א. הוא מחליף כל איבר באיבר קטן יותר שנמצא אחריו במערך.
+            </button>
+            <button onclick="checkAnswer('question7', 'b')">
+              ב. הוא מחלק את המערך לשני תת-מערכים וממזג אותם חזרה בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question7', 'c')">
+              ג. הוא בונה ערימה מהנתונים ומסדר אותם מהקטן לגדול.
+            </button>
+            <button onclick="checkAnswer('question7', 'd')">
+              ד. הוא מחלק את המערך לחלקים קטנים יותר וממיין אותם שוב ושוב.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question" id="question8" data-correct-answer="b">
+          <p>8. מהי מורכבות הזמן של אלגוריתם מיון בועות?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question8', 'a')">
+              א. O(n log n)
+            </button>
+            <button onclick="checkAnswer('question8', 'b')">ב. O(n^2)</button>
+            <button onclick="checkAnswer('question8', 'c')">ג. O(n)</button>
+            <button onclick="checkAnswer('question8', 'd')">ד. O(log n)</button>
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question" id="question9" data-correct-answer="a">
+          <p>
+            9. באיזה מקרה אלגוריתם מיון בועות יהיה יעיל יותר מאשר מיון בחירה?
+          </p>
+          <div class="options">
+            <button onclick="checkAnswer('question9', 'a')">
+              א. כאשר המערך כבר מסודר
+            </button>
+            <button onclick="checkAnswer('question9', 'b')">
+              ב. כאשר המערך מכיל מספר קטן של נתונים
+            </button>
+            <button onclick="checkAnswer('question9', 'c')">
+              ג. כאשר המערך מכיל מספר גדול של נתונים
+            </button>
+            <button onclick="checkAnswer('question9', 'd')">
+              ד. כאשר המערך מכיל נתונים כפולים
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question" id="question10" data-correct-answer="d">
+          <p>10. מהו חסרון עיקרי של אלגוריתם מיון בועות?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question10', 'a')">
+              א. הוא יעיל רק עבור מערכים קטנים.
+            </button>
+            <button onclick="checkAnswer('question10', 'b')">
+              ב. הוא רגיש לנתונים כפולים.
+            </button>
+            <button onclick="checkAnswer('question10', 'c')">
+              ג. הוא דורש מבנה נתונים מורכב.
+            </button>
+            <button onclick="checkAnswer('question10', 'd')">
+              ד. הוא לא מתאים למערכים גדולים מאוד.
+            </button>
+          </div>
+        </div>
+        <!-- Question 11 -->
+        <div class="question" id="question11" data-correct-answer="c">
+          <p>11. מהי מטרת אלגוריתם מיון הכנסה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question11', 'a')">
+              א. למצוא את האיבר הגדול ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question11', 'b')">
+              ב. למצוא את האיבר הקטן ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question11', 'c')">
+              ג. לסדר את כל האיברים במערך בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question11', 'd')">
+              ד. לסדר את כל האיברים במערך בסדר יורד.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question" id="question12" data-correct-answer="d">
+          <p>12. כיצד עובד אלגוריתם מיון הכנסה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question12', 'a')">
+              א. הוא מחליף כל איבר באיבר קטן יותר שנמצא אחריו במערך.
+            </button>
+            <button onclick="checkAnswer('question12', 'b')">
+              ב. הוא מחלק את המערך לשני תת-מערכים וממזג אותם חזרה בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question12', 'c')">
+              ג. הוא בונה ערימה מהנתונים ומסדר אותם מהקטן לגדול.
+            </button>
+            <button onclick="checkAnswer('question12', 'd')">
+              ד. הוא לוקח כל איבר בתורו ומכניס אותו למקומו הנכון במערך המסודר.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question" id="question13" data-correct-answer="d">
+          <p>13. מהי מורכבות הזמן של אלגוריתם מיון הכנסה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question13', 'a')">
+              א. O(n log n)
+            </button>
+            <button onclick="checkAnswer('question13', 'b')">ב. O(n^2)</button>
+            <button onclick="checkAnswer('question13', 'c')">ג. O(n)</button>
+            <button onclick="checkAnswer('question13', 'd')">
+              ד. תלויה במספר הנתונים הכפולים במערך
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question" id="question14" data-correct-answer="b">
+          <p>
+            14. באיזה מקרה אלגוריתם מיון הכנסה יהיה יעיל יותר מאשר מיון בועות?
+          </p>
+          <div class="options">
+            <button onclick="checkAnswer('question14', 'a')">
+              א. כאשר המערך כבר מסודר
+            </button>
+            <button onclick="checkAnswer('question14', 'b')">
+              ב. כאשר המערך מכיל מספר קטן של נתונים
+            </button>
+            <button onclick="checkAnswer('question14', 'c')">
+              ג. כאשר המערך מכיל מספר גדול של נתונים
+            </button>
+            <button onclick="checkAnswer('question14', 'd')">
+              ד. כאשר המערך מכיל נתונים כפולים
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question" id="question15" data-correct-answer="c">
+          <p>15. מהו יתרון עיקרי של אלגוריתם מיון הכנסה?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question15', 'a')">
+              א. הוא יעיל הן בזמן והן בזיכרון.
+            </button>
+            <button onclick="checkAnswer('question15', 'b')">
+              ב. הוא מתאים למערכים גדולים מאוד.
+            </button>
+            <button onclick="checkAnswer('question15', 'c')">
+              ג. הוא קל להבנה ויישום.
+            </button>
+            <button onclick="checkAnswer('question15', 'd')">
+              ד. הוא יעיל במיוחד עבור נתונים כפולים.
+            </button>
+          </div>
+        </div>
+        <!-- Question 16 -->
+        <div class="question" id="question16" data-correct-answer="ג">
+          <p>16. מהי מטרת אלגוריתם מיון מיזוג?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question16', 'א')">
+              א. למצוא את האיבר הגדול ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question16', 'ב')">
+              ב. למצוא את האיבר הקטן ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question16', 'ג')">
+              ג. לסדר את כל האיברים במערך בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question16', 'ד')">
+              ד. לסדר את כל האיברים במערך בסדר יורד.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question" id="question17" data-correct-answer="ד">
+          <p>17. כיצד עובד אלגוריתם מיון מיזוג?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question17', 'א')">
+              א. הוא מחליף כל איבר באיבר קטן יותר שנמצא אחריו במערך.
+            </button>
+            <button onclick="checkAnswer('question17', 'ב')">
+              ב. הוא לוקח כל איבר בתורו ומכניס אותו למקומו הנכון במערך המסודר.
+            </button>
+            <button onclick="checkAnswer('question17', 'ג')">
+              ג. האיברים משובצים לתת מערכים עד שהמערך נסדר.
+            </button>
+            <button onclick="checkAnswer('question17', 'ד')">
+              ד. המערך מחולק לשניים וממיין כל חצי בנפרד, ולאחר מכן ממזג את
+              החצאים.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question" id="question18" data-correct-answer="א">
+          <p>18. מהי מורכבות הזמן של אלגוריתם מיון מיזוג?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question18', 'א')">
+              א. O(n log n)
+            </button>
+            <button onclick="checkAnswer('question18', 'ב')">ב. O(n^2)</button>
+            <button onclick="checkAnswer('question18', 'ג')">ג. O(n)</button>
+            <button onclick="checkAnswer('question18', 'ד')">
+              ד. O(log n)
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question" id="question19" data-correct-answer="ב">
+          <p>
+            19. באיזה מקרה אלגוריתם מיון מיזוג יהיה יעיל יותר מאשר מיון מהיר?
+          </p>
+          <div class="options">
+            <button onclick="checkAnswer('question19', 'א')">
+              א. כאשר המערך כבר מסודר
+            </button>
+            <button onclick="checkAnswer('question19', 'ב')">
+              ב. כאשר המערך מכיל מספר קטן של נתונים
+            </button>
+            <button onclick="checkAnswer('question19', 'ג')">
+              ג. כאשר המערך מכיל מספר גדול של נתונים
+            </button>
+            <button onclick="checkAnswer('question19', 'ד')">
+              ד. כאשר המערך מכיל נתונים כפולים
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question" id="question20" data-correct-answer="ג">
+          <p>20. מהו יתרון עיקרי של אלגוריתם מיון מיזוג?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question20', 'א')">
+              א. הוא יעיל הן בזמן והן בזיכרון.
+            </button>
+            <button onclick="checkAnswer('question20', 'ב')">
+              ב. הוא מתאים למערכים גדולים מאוד.
+            </button>
+            <button onclick="checkAnswer('question20', 'ג')">
+              ג. הוא קל להבנה ויישום.
+            </button>
+            <button onclick="checkAnswer('question20', 'ד')">
+              ד. הוא יעיל במיוחד עבור נתונים כפולים.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question" id="question21" data-correct-answer="ב">
+          <p>21. מהי מטרת אלגוריתם מיון מהיר?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question21', 'א')">
+              א. למצוא את האיבר הגדול ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question21', 'ב')">
+              ב. לסדר את כל האיברים במערך בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question21', 'ג')">
+              ג. למצוא את האיבר הקטן ביותר במערך.
+            </button>
+            <button onclick="checkAnswer('question21', 'ד')">
+              ד. לסדר את כל האיברים במערך בסדר יורד.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="question" id="question22" data-correct-answer="ד">
+          <p>22. כיצד עובד אלגוריתם מיון מהיר?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question22', 'א')">
+              א. הוא מחליף כל איבר באיבר קטן יותר שנמצא אחריו במערך.
+            </button>
+            <button onclick="checkAnswer('question22', 'ב')">
+              ב. הוא מחלק את המערך לשני תת-מערכים וממזג אותם חזרה בסדר עולה.
+            </button>
+            <button onclick="checkAnswer('question22', 'ג')">
+              ג. הוא בונה ערימה מהנתונים ומסדר אותם מהקטן לגדול.
+            </button>
+            <button onclick="checkAnswer('question22', 'ד')">
+              ד. הוא לוקח כל איבר בתורו ומכניס אותו למקומו הנכון במערך המסודר.
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="question" id="question23" data-correct-answer="ב">
+          <p>23. מהי מורכבות הזמן של אלגוריתם מיון מהיר?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question23', 'א')">
+              א. O(n log n)
+            </button>
+            <button onclick="checkAnswer('question23', 'ב')">ב. O(n^2)</button>
+            <button onclick="checkAnswer('question23', 'ג')">ג. O(n)</button>
+            <button onclick="checkAnswer('question23', 'ד')">
+              ד. O(log n)
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="question" id="question24" data-correct-answer="א">
+          <p>
+            24. באיזה מקרה אלגוריתם מיון מהיר יהיה יעיל יותר מאשר מיון מיזוג?
+          </p>
+          <div class="options">
+            <button onclick="checkAnswer('question24', 'א')">
+              א. כאשר המערך כבר מסודר
+            </button>
+            <button onclick="checkAnswer('question24', 'ב')">
+              ב. כאשר המערך מכיל מספר קטן של נתונים
+            </button>
+            <button onclick="checkAnswer('question24', 'ג')">
+              ג. כאשר המערך מכיל מספר גדול של נתונים
+            </button>
+            <button onclick="checkAnswer('question24', 'ד')">
+              ד. כאשר המערך מכיל נתונים כפולים
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="question" id="question25" data-correct-answer="א">
+          <p>25. מהו יתרון עיקרי של אלגוריתם מיון מהיר?</p>
+          <div class="options">
+            <button onclick="checkAnswer('question25', 'א')">
+              א. הוא יעיל הן בזמן והן בזיכרון.
+            </button>
+            <button onclick="checkAnswer('question25', 'ב')">
+              ב. הוא מתאים למערכים גדולים מאוד.
+            </button>
+            <button onclick="checkAnswer('question25', 'ג')">
+              ג. הוא קל להבנה ויישום.
+            </button>
+            <button onclick="checkAnswer('question25', 'ד')">
+              ד. הוא יעיל במיוחד עבור נתונים כפולים.
+            </button>
+          </div>
+        </div>
+        <!-- Add more questions similarly -->
+      </div>
+
+      <section class="exercise">
+        <h3>תרגיל 6</h3>
+        <pre>
+אם הגעתם עד לכאן אז המצב טוב
+        </pre>
+        <p>👌</p>
+      </section>
+    </main>
+    <footer>
+      <a href="#" class="previous-exercise">מונחה עצמים למתחילים 👉🏽➡️</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
