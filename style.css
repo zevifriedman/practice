@@ -1,564 +1,437 @@
 /* Resetting default margin and padding */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-  direction: rtl;
-}
 
-/* Centering everything */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+body {
+    background-image: url("coding.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    direction: rtl;
 }
 
 header {
-  background-color: #2d3740; /* Darker blue background */
-  color: #fff; /* White text */
-  padding: 40px 0; /* Increased padding for content spacing */
-  text-align: center;
-  width: 100%;
-  position: relative; /* Added relative positioning for effects */
+    position: relative;
+    overflow: hidden;
 }
-
-/* Content container with subtle shadow and hover effect */
 .header-content {
-  display: inline-block;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.2s ease-in-out;
-}
-
-.header-content:hover {
-  transform: scale(1.02); /* Slight scale up on hover */
-}
-
-/* Optional: Animated title with subtle text shadow */
-h1 {
-  font-size: 2.5em; /* Larger font size */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
-  animation: text-pulse 2s ease-in-out infinite alternate;
-}
-
-/* Particle effect container with multiple pseudo-elements */
-.particle-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Particle styles using various pseudo-elements */
-.particle-container::before,
-.particle-container::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.particle-container::before {
-  background-image: radial-gradient(
-    circle at 0% 0%,
-    #3f51b5 0%,
-    #00bcd4 50%
-  ); /* Blue gradient particles */
-  opacity: 0.3; /* Adjust opacity for desired visibility */
-  animation: move-particles-1 10s ease-in-out infinite alternate;
-}
-
-.particle-container::after {
-  background-image: radial-gradient(
-    circle at 100% 100%,
-    #3f51b5 0%,
-    #00bcd4 50%
-  ); /* Blue gradient particles (opposite direction) */
-  opacity: 0.2; /* Adjust opacity for desired visibility */
-  animation: move-particles-2 15s ease-in-out infinite alternate;
-}
-
-/* Animation definitions for particle movement */
-@keyframes text-pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes move-particles-1 {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(100%, 100%) rotate(360deg);
-  }
-}
-
-@keyframes move-particles-2 {
-  0% {
-    transform: translate(100%, 100%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+    position: relative;
+    overflow: hidden;
+    display: flex; /* הופך את ה-header למכל גמיש */
+    align-items: center; /* מרכז את התוכן אנכית */
+    justify-content: center; /* מרכז את התוכן אופקית */
+    min-height: 300px; /* גובה מינימלי אופציונלי */
 }
 
 header h1 {
-  font-size: 3.3em; /* Increased font size by 50% */
-  margin-bottom: 10px;
-  color: #00bcd4; /* Accent color for h1 */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Text shadow effect */
+    font-size: 3.3em; /* Increased font size by 50% */
+    margin-bottom: 10px;
+    color: #ffffff; /* Accent color for h1 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.296); /* Text shadow effect */
+}
+.subheading {
+    font-size: 1.8em;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.navbar.scrolled {
-  opacity: 0; /* Transparent when scrolled down */
-  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* ממקם את הווידאו מאחורי הטקסט */
 }
-
 nav {
-  background-color: #30363d; /* Slightly darker blue background */
-  padding: 10px 0; /* Reduced padding for less height */
-  text-align: center;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  overflow-x: hidden; /* Hide horizontal overflow */
-  white-space: nowrap; /* Prevent wrapping to a new line */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center navbar items horizontally */
+    background-color: #090909c4;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
-  display: inline-block;
-  padding: 15px 30px; /* Reduced padding for less height */
-  color: #ffffff; /* White text for better contrast */
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.2s;
-  font-size: 1.4em; /* Slightly smaller font size */
-  margin: 0 5px; /* Add some space between links */
+    display: inline-block;
+    padding: 15px 30px; /* Reduced padding for less height */
+    color: #ffffff; /* White text for better contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.4em; /* Slightly smaller font size */
+    margin: 0 5px; /* Add some space between links */
 
-  /* Cool underline animation on hover */
-  position: relative;
-  overflow: hidden;
-}
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-  nav a {
-    padding: 10px 15px; /* Adjusted padding for smaller screens */
-    font-size: 1em; /* Adjusted font size for smaller screens */
-  }
+    /* Cool underline animation on hover */
+    position: relative;
+    overflow: hidden;
 }
 
 nav a:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px; /* Thin underline */
-  background-color: #00bcd4; /* Lighter blue underline */
-  bottom: 0;
-  left: 0;
-  transform: translateX(-100%); /* Hidden initially */
-  transition: transform 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Thin underline */
+    background-color: #00bcd4; /* Lighter blue underline */
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%); /* Hidden initially */
+    transition: transform 0.3s ease-in-out;
 }
 
 nav a:hover:after {
-  transform: translateX(0); /* Underline animates on hover */
+    transform: translateX(0); /* Underline animates on hover */
+}
+@media screen and (max-width: 768px) {
+    nav a {
+        padding: 10px 15px; /* Adjusted padding for smaller screens */
+        font-size: 1em; /* Adjusted font size for smaller screens */
+    }
+}
+
+li {
+    list-style: none;
+}
+/* Welcome Box Styles */
+.welcome {
+    background: linear-gradient(120deg, #00bcd4, #3f51b5);
+
+    background-color: #00bcd4; /* Lighter gray background */
+    padding: 20px;
+
+    margin-bottom: 20px;
 }
 
 /* Main Content Styles */
 main {
-  padding: 15px; /* Reduced padding */
-  text-align: center;
-  color: #000; /* Black text for better readability */
-  font-size: 1.8em;
+    text-align: center;
+    color: #000; /* Black text for better readability */
+    font-size: 1.8em;
 }
 
 /* General style for exercises */
 .exercise {
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 30px;
-  border-left: 5px solid #007bff;
-  transition: all 0.3s ease; /* Animation on hover */
-  overflow: hidden; /* Hide overflow */
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 5px solid #007bff;
+    transition: all 0.3s ease; /* Animation on hover */
+    overflow: hidden; /* Hide overflow */
 }
 
 /* Hover effect */
 .exercise:hover {
-  transform: translateY(-5px); /* Move slightly down */
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Change shadow */
+    transform: translateY(-5px); /* Move slightly down */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Change shadow */
 }
 
 /* Title */
 .exercise h3 {
-  color: #007bff;
-  font-size: 1.8em;
-  margin-top: 0;
-  margin-bottom: 15px;
+    color: #007bff;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 /* Code snippet */
 .exercise pre {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: #333;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  overflow-x: auto; /* Horizontal scroll */
-  white-space: pre-wrap; /* Wrap long lines */
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    overflow-x: auto; /* Horizontal scroll */
+    white-space: pre-wrap; /* Wrap long lines */
 }
 
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
-  .exercise pre {
-    font-size: 1em; /* Adjust font size for smaller screens */
-  }
-}
-
-/* Welcome Box Styles */
-.welcome {
-  background: linear-gradient(120deg, #00bcd4, #3f51b5);
-
-  background-color: #00bcd4; /* Lighter gray background */
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Sticky Nav Styles */
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    .exercise pre {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
 }
 
 /* Button Styles */
 button {
-  margin-top: 5px;
-  background: linear-gradient(45deg, #00bcd4, #3f51b5);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+    margin-top: 5px;
+    background: linear-gradient(45deg, #00bcd4, #3f51b5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background: linear-gradient(45deg, #3f51b5, #00bcd4);
-  transform: scale(1.05);
+    background: linear-gradient(45deg, #3f51b5, #00bcd4);
+    transform: scale(1.05);
 }
 
 .next-exercise {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: linear-gradient(to top right, #3f51b5 0%, #00bcd4 100%);
-  background-size: 200% auto;
-  animation: gradient-animate 5s ease-in-out infinite alternate;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: 2px solid #2d3740;
-  text-decoration: none;
-  font-size: 1.5em;
-  transition: background-color 0.3s, transform 0.2s;
-  transform: scale(1); /* Set initial scale to avoid jumpiness */
-  animation: pop-animation 0.5s ease-in-out infinite alternate;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(to top right, #3f51b5 0%, #00bcd4 100%);
+    background-size: 200% auto;
+    animation: gradient-animate 5s ease-in-out infinite alternate;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #2d3740;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: background-color 0.3s, transform 0.2s;
+    transform: scale(1); /* Set initial scale to avoid jumpiness */
+    animation: pop-animation 0.5s ease-in-out infinite alternate;
 }
 
 .next-exercise:hover {
-  background: linear-gradient(to top right, #00bcd4 0%, #3f51b5 100%);
-  transform: scale(1.05); /* Increase scale slightly on hover */
+    background: linear-gradient(to top right, #00bcd4 0%, #3f51b5 100%);
+    transform: scale(1.05); /* Increase scale slightly on hover */
 }
 
 /* Animation definitions */
 @keyframes gradient-animate {
-  0% {
-    background-position: 0 0%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
+    0% {
+        background-position: 0 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
 }
 
 @keyframes pop-animation {
-  0% {
-    transform: scale(1); /* Start at default scale */
-  }
-  50% {
-    transform: scale(1.03); /* Scale up slightly in the middle */
-  }
-  100% {
-    transform: scale(1); /* Return to default scale */
-  }
+    0% {
+        transform: scale(1); /* Start at default scale */
+    }
+    50% {
+        transform: scale(1.03); /* Scale up slightly in the middle */
+    }
+    100% {
+        transform: scale(1); /* Return to default scale */
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .next-exercise {
-    bottom: 10px; /* Adjusted bottom spacing for smaller screens */
-    left: 10px; /* Adjusted left spacing for smaller screens */
-    font-size: 1em; /* Reduced font size for smaller screens */
-    padding: 8px 16px; /* Reduced padding for smaller screens */
-  }
+    .next-exercise {
+        bottom: 10px; /* Adjusted bottom spacing for smaller screens */
+        left: 10px; /* Adjusted left spacing for smaller screens */
+        font-size: 1em; /* Reduced font size for smaller screens */
+        padding: 8px 16px; /* Reduced padding for smaller screens */
+    }
 }
 
 /*  */
 
 .previous-exercise {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(to top right, #3f51b5 0%, #00bcd4 100%);
-  background-size: 200% auto;
-  animation: gradient-animate 5s ease-in-out infinite alternate;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: 2px solid #2d3740;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to top right, #3f51b5 0%, #00bcd4 100%);
+    background-size: 200% auto;
+    animation: gradient-animate 5s ease-in-out infinite alternate;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #2d3740;
 
-  text-decoration: none;
-  font-size: 1.5em;
-  transition: background-color 0.3s, transform 0.2s;
-  transform: scale(1); /* Set initial scale to avoid jumpiness */
-  animation: pop-animation 0.5s ease-in-out infinite alternate;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: background-color 0.3s, transform 0.2s;
+    transform: scale(1); /* Set initial scale to avoid jumpiness */
+    animation: pop-animation 0.5s ease-in-out infinite alternate;
 }
 
 .previous-exercise:hover {
-  background: linear-gradient(to top right, #00bcd4 0%, #3f51b5 100%);
-  transform: scale(1.05); /* Increase scale slightly on hover */
+    background: linear-gradient(to top right, #00bcd4 0%, #3f51b5 100%);
+    transform: scale(1.05); /* Increase scale slightly on hover */
 }
 
 /* Animation definitions (same as previous exercise) */
 @keyframes gradient-animate {
-  0% {
-    background-position: 0 0%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
+    0% {
+        background-position: 0 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
 }
 
 @keyframes pop-animation {
-  0% {
-    transform: scale(1); /* Start at default scale */
-  }
-  50% {
-    transform: scale(1.03); /* Scale up slightly in the middle */
-  }
-  100% {
-    transform: scale(1); /* Return to default scale */
-  }
+    0% {
+        transform: scale(1); /* Start at default scale */
+    }
+    50% {
+        transform: scale(1.03); /* Scale up slightly in the middle */
+    }
+    100% {
+        transform: scale(1); /* Return to default scale */
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .previous-exercise {
-    bottom: 10px; /* Adjusted bottom spacing for smaller screens */
-    right: 10px; /* Adjusted right spacing for smaller screens */
-    font-size: 1em; /* Reduced font size for smaller screens */
-    padding: 8px 16px; /* Reduced padding for smaller screens */
-  }
-}
-
-/* Hero section styles */
-.hero {
-  background: linear-gradient(135deg, #2980b9, #6ab7ff);
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 80px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
+    .previous-exercise {
+        bottom: 10px; /* Adjusted bottom spacing for smaller screens */
+        right: 10px; /* Adjusted right spacing for smaller screens */
+        font-size: 1em; /* Reduced font size for smaller screens */
+        padding: 8px 16px; /* Reduced padding for smaller screens */
+    }
 }
 
 /* footer */
 
 .footer {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Light text color */
-  padding: 20px 0; /* Reduce padding slightly */
-  text-align: center; /* Center content horizontally */
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 20px; /* Reduce padding slightly */
+    text-align: center; /* Center content horizontally */
 }
 
 .footer p {
-  margin-bottom: 0; /* Remove margin for cleaner look */
-  font-size: 1em;
+    margin-bottom: 0; /* Remove margin for cleaner look */
+    font-size: 1em;
 }
 
 /* ubject card v */
 
 .subject-link {
-  display: block;
-  text-decoration: none;
+    display: block;
+    text-decoration: none;
 }
 
 .subject-card {
-  position: relative;
-  background: linear-gradient(120deg, #00bcd4, #3f51b5);
-  color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s;
-  border: 2px solid #2d3740;
+    position: relative;
+    background: linear-gradient(120deg, #00bcd4, #3f51b5);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
 .subject-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  opacity: 0;
-  transition: opacity 0.3s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .subject-card:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .subject-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .subject-card:hover {
-  transform: translateY(-5px);
-}
-
-.subject-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .subject-card p {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .subject-card a {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.subject-card a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 @media screen and (max-width: 768px) {
-  .subject-card {
-    padding: 15px;
-    margin: 15px 0;
-  }
+    .subject-card {
+        padding: 15px;
+        margin: 15px 0;
+    }
 
-  .subject-card h2 {
-    font-size: 20px;
-  }
+    .subject-card h2 {
+        font-size: 20px;
+    }
 
-  .subject-card p {
-    font-size: 16px;
-  }
+    .subject-card p {
+        font-size: 16px;
+    }
 
-  .subject-card a {
-    padding: 8px 16px;
-  }
+    .subject-card a {
+        padding: 8px 16px;
+    }
 }
 
-.quiz-container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+.tests-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 עמודות בגודל שווה */
+    gap: 20px; /* רווח בין הכרטיסים */
+    padding: 20px;
 }
 
-h1 {
-  text-align: center;
+.test-card {
+    padding: 30px;
+    text-align: center;
+    background-color: #abc6fffb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
-.question {
-  margin-bottom: 20px;
+.test-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.options {
-  margin-left: 20px;
+.test-card h2 {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
 }
 
-.answer {
-  margin-top: 10px;
+.test-card p {
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.test-card a {
+    /* ... סגנונות לכפתורים ... */
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #6f47ff; /* ירוק */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.test-card a:hover {
+    background-color: #ffffff; /* ירוק כהה יותר */
+    color: #6f47ff;
 }
