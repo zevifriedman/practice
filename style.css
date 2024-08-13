@@ -11,35 +11,43 @@ body {
     direction: rtl;
 }
 
+/* Base styles for the header */
 header {
     position: relative;
     overflow: hidden;
 }
+
+/* Styles for the header content */
 .header-content {
     position: relative;
     overflow: hidden;
-    display: flex; /* הופך את ה-header למכל גמיש */
-    align-items: center; /* מרכז את התוכן אנכית */
-    justify-content: center; /* מרכז את התוכן אופקית */
-    min-height: 300px; /* גובה מינימלי אופציונלי */
+    display: flex;
+    flex-direction: column; /* Ensures content stacks vertically on smaller screens */
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Adjust based on your design needs */
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+    text-align: center; /* Center-align text within the header */
 }
 
+/* Styles for h1 */
 header h1 {
-    font-size: 3.3em; /* Increased font size by 50% */
+    font-size: 3.3em; /* Base font size for large screens */
     margin-bottom: 10px;
-    color: #ffffff; /* Accent color for h1 */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.296); /* Text shadow effect */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.296);
 }
+
+/* Styles for subheading */
 .subheading {
-    font-size: 1.8em;
+    font-size: 1.8em; /* Base font size for large screens */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgb(255, 255, 255);
     margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
+/* Styles for video */
 video {
     position: absolute;
     top: 0;
@@ -47,8 +55,54 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* ממקם את הווידאו מאחורי הטקסט */
+    z-index: -1;
 }
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5em; /* Adjust font size for medium screens */
+    }
+
+    .subheading {
+        font-size: 1.5em; /* Adjust font size for medium screens */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .header-content {
+        min-height: 200px; /* Adjust header height for mobile screens */
+        padding: 15px; /* Adjust padding for mobile screens */
+    }
+
+    header h1 {
+        font-size: 2em; /* Smaller font size for small screens */
+    }
+
+    .subheading {
+        font-size: 1.2em; /* Smaller font size for small screens */
+    }
+}
+
+/* For very small devices (e.g., small phones) */
+@media (max-width: 480px) {
+    .header-content {
+        min-height: 150px; /* Further adjust header height for very small screens */
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    header h1 {
+        font-size: 1.6em; /* Even smaller font size for very small screens */
+    }
+
+    .subheading {
+        font-size: 1em; /* Even smaller font size for very small screens */
+    }
+}
+
 nav {
     background-color: #090909c4;
     padding: 10px 0;
