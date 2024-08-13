@@ -387,10 +387,14 @@ button:hover {
     }
 }
 
+/* General Styles */
 .tests-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 עמודות בגודל שווה */
-    gap: 20px; /* רווח בין הכרטיסים */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    ); /* Responsive grid columns */
+    gap: 20px; /* Space between cards */
     padding: 20px;
 }
 
@@ -400,7 +404,7 @@ button:hover {
     background-color: #abc6fffb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .test-card:hover {
@@ -420,18 +424,42 @@ button:hover {
 }
 
 .test-card a {
-    /* ... סגנונות לכפתורים ... */
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     color: #ffffff;
-    background-color: #6f47ff; /* ירוק */
+    background-color: #6f47ff; /* Button background color */
     transition: background-color 0.2s ease-in-out;
 }
 
 .test-card a:hover {
-    background-color: #ffffff; /* ירוק כהה יותר */
+    background-color: #ffffff; /* Button hover background color */
     color: #6f47ff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .tests-section {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        ); /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .tests-section {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(300px, 1fr)
+        ); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .tests-section {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
 }
